@@ -10,6 +10,7 @@ function checkInput(value) {
   }
 }
 
+///Questions in the array that will output when called
 const questions = [
   {
     type: "input",
@@ -38,13 +39,13 @@ const questions = [
   },
   {
     type: "input",
-    message: "Provide the contributors for this app ?",
-    name: "contributors",
+    message: "Provide the contributors for this app.",
+    name: "Contribution",
     validate: checkInput,
   },
   {
     type: "input",
-    message: "Explain the Test for this app. :",
+    message: "Explain the Test for this app.",
     name: "Test",
     validate: checkInput,
   },
@@ -70,6 +71,7 @@ const questions = [
   },
 ];
 
+//file that writes the data for output
 function writeToFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (err) {
@@ -78,7 +80,7 @@ function writeToFile(fileName, data) {
     console.log("Successfully created README: " + fileName);
   });
 }
-
+//writes the file to to push to the generateMarkdown file when called.
 function init() {
   inquirer.prompt(questions).then((answers) => {
     const response = generatorMarkdown(answers);
@@ -88,4 +90,5 @@ function init() {
   });
 }
 
+//Outputs the data
 init();
