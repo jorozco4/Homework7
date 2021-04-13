@@ -1,4 +1,5 @@
 const inquirer = require("inquirer");
+const generatorMarkdown = require("./utils/generateMarkdown");
 const fs = require("fs");
 
 function checkInput(value) {
@@ -9,30 +10,48 @@ function checkInput(value) {
   }
 }
 
-inquirer.prompt([
+const questions = [
   {
     type: "input",
     message: "What is the title of your project",
-    name: "title",
+    name: "Title",
     //Validates that a user in actually inputting data
     validate: checkInput,
   },
   {
     type: "input",
     message: "Explain the description of your project ?",
-    name: "description",
+    name: "Description",
     validate: checkInput,
   },
   {
     type: "input",
-    message: "Enter a description on how to install software programs. :",
-    name: "description",
+    message: "Explain the Installation instructions for this app ?",
+    name: "Instructions",
+    validate: checkInput,
+  },
+  {
+    type: "input",
+    message: "Explain the usage for this information ?",
+    name: "Usage",
+    validate: checkInput,
+  },
+  {
+    type: "input",
+    message: "Provide the contributors for this app ?",
+    name: "contributors",
+    validate: checkInput,
+  },
+  {
+    type: "input",
+    message: "Explain the Test for this app. :",
+    name: "Test",
     validate: checkInput,
   },
   {
     type: "input",
     message: "Choose a license for this project",
-    name: "license",
+    name: "License",
     choices: ["API", "BSD", "MIT", "GPL", "ISC"],
     validate: checkInput,
   },
@@ -40,20 +59,33 @@ inquirer.prompt([
   {
     type: "input",
     message: "Enter your GitHub username",
-    name: "Github",
+    name: "userName",
     validate: checkInput,
   },
   {
     type: "input",
     message: "Enter your email address",
-    name: "Github",
+    name: "userEmail",
     validate: checkInput,
   },
-]);
-then((response) => {
-  const filename = response.name.toLowerCase().split("").join("");
+];
 
-  fs.writeFile(filename, JSON.stringify(response, null, "\t"), (err) =>
-    err ? console.log(err) : console.log("Success")
-  );
-});
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
+      return console.log(err);
+    }
+    console.log("Successfully created README: " + fileName);
+  });
+}
+
+function init() {
+  inquirer.prompt(questions).then((answers) => {
+    const response = generatorMarkdown(answers);
+    console.log(answers);
+
+    writeToFile("README.MD", response);
+  });
+}
+
+init();
