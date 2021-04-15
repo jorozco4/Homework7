@@ -1,41 +1,57 @@
 function generateMarkdown(data) {
   return `
-        
-    ## Description
-    The Purpose of this app is to allow users to utilized the terminal into making user friendly README file.
-    ${data.Description}
 
-     ## Table of Contents
-     *[Installation](#installation)
-     *[Usage](#usage)
-     *[License](#license)
-     *[Contribution](#contribution)
-     *[Test](#tests)
-     *[Questions](#questions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
         
-        ## Title
-        In order for the title to run the user must follow the directions.,
-        ${data.Title}
+## Description
+The Purpose of this app is to allow users to utilized the terminal into making a user friendly README file.
+${data.Description}
+
+
+## Table of Contents
+* [Title](#title)
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contribution](#contribution)
+* [Test](#tests)
+* [Contact](#contact)
+        
+## Title
+README.MD generator
+${data.Title}
+
+## Description
+
+This app is a user friendly module that allows personnel to generate a README.MD file.
+${data.Description}
+
+## Installation
+
+This app is installed by using "Index.js, generateMarkdown.js, require, fs and utils.
+
+## Usuage
+To use this app,
+${data.Usage}
     
-        ## Usuage
-        To use this app,
-        ${data.Usage}
+## License
+The following app is licensed under MIT,
+${data.License}
+
+## Contribution 
+Contribution : Unknown,
+${data.Contribution}
     
-        ## License
-        The following app is licensed under MIT,
-        ${data.License}
+## Test
+In order to run this test the user must open the terminal, call node index.js, and answer the questions.,
+${data.Test}
     
-        ## Contribution 
-        Contribution : Unknown,
-        ${data.Contribution}
-    
-        ## Test
-        In order to run this test the the user must input the data when questions are asked.,
-        ${data.Tests}
-    
-        ## Contact Info 
-        GitHub Username: ${data.userName}
-        Email: ${data.userEmail}
+## Contact Info 
+GitHub Username: ${data.userName}
+https://jorozco4.github.io/README.MD-GENERATOR/
+
+Email: ${data.userEmail}
     
      `;
 }

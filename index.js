@@ -14,26 +14,26 @@ function checkInput(value) {
 const questions = [
   {
     type: "input",
-    message: "What is the title of your project",
+    message: "What is the title of your project?",
     name: "Title",
-    //Validates that a user in actually inputting data
+    //Validates that a user is actually inputting data
     validate: checkInput,
   },
   {
     type: "input",
-    message: "Explain the description of your project ?",
+    message: "Explain the description of your project.",
     name: "Description",
     validate: checkInput,
   },
   {
     type: "input",
-    message: "Explain the Installation instructions for this app ?",
+    message: "Explain the Installation instructions for this app?",
     name: "Instructions",
     validate: checkInput,
   },
   {
     type: "input",
-    message: "Explain the usage for this information ?",
+    message: "Explain the usage for this information?",
     name: "Usage",
     validate: checkInput,
   },
@@ -45,15 +45,15 @@ const questions = [
   },
   {
     type: "input",
-    message: "Explain the Test for this app.",
+    message: "What test is needed to run this app?",
     name: "Test",
     validate: checkInput,
   },
   {
     type: "input",
-    message: "Choose a license for this project",
+    message: "What license is used for this app?",
     name: "License",
-    choices: ["API", "BSD", "MIT", "GPL", "ISC"],
+    choices: ["MIT", "MOZILLA", "IBM"],
     validate: checkInput,
   },
 
