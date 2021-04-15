@@ -4,7 +4,11 @@
         
 ## Description
 The Purpose of this app is to allow users to utilized the terminal into making a user friendly README file.
-To generate a user friendly README.MD file in the command line.
+To generate a user friendly README.MD file in the command line properly to export the data.
+
+## ScreenShots
+
+![image](https://user-images.githubusercontent.com/61666288/114800920-a5dfcf80-9d68-11eb-9601-7850f03036b4.png)
 
 
 ## Table of Contents
@@ -24,7 +28,7 @@ README.MD_GENERATOR
 ## Description
 
 This app is a user friendly module that allows personnel to generate a README.MD file.
-To generate a user friendly README.MD file in the command line.
+To generate a user friendly README.MD file in the command line properly to export the data.
 
 ## Installation
 
@@ -40,7 +44,7 @@ MIT
 
 ## Contribution 
 Contribution : Unknown,
-N/a
+N/A
     
 ## Test
 In order to run this test the user must open the terminal, call node index.js, and answer the questions.,

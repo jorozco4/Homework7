@@ -7,6 +7,10 @@ function generateMarkdown(data) {
 The Purpose of this app is to allow users to utilized the terminal into making a user friendly README file.
 ${data.Description}
 
+## ScreenShots
+
+![image](https://user-images.githubusercontent.com/61666288/114800920-a5dfcf80-9d68-11eb-9601-7850f03036b4.png)
+
 
 ## Table of Contents
 * [Title](#title)
