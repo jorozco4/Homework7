@@ -11,6 +11,9 @@ ${data.Description}
 
 ![image](https://user-images.githubusercontent.com/61666288/114800920-a5dfcf80-9d68-11eb-9601-7850f03036b4.png)
 
+## Video Walk Through
+
+https://drive.google.com/file/d/1eVNVDEEC9coaD0lnPQwzom4FhSz_F4iq/view
 
 ## Table of Contents
 * [Title](#title)
@@ -53,7 +56,7 @@ ${data.Test}
     
 ## Contact Info 
 GitHub Username: ${data.userName}
-https://jorozco4.github.io/README.MD-GENERATOR/
+https://github.com/jorozco4/README.MD-GENERATOR
 
 Email: ${data.userEmail}
     
